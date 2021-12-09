@@ -1,0 +1,6 @@
+{
+    "watch": "d01/*.ts",
+    "execMap": {
+        "ts": "node_modules/.bin/ts-node"
+    }
+}
