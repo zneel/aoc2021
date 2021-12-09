@@ -17,15 +17,11 @@ export const part1 = (input: string[]) => {
 export const part2 = (input: string[]) => {
     const { vertical, horizontal, aim } = parseSubInstructions(input).reduce(
         (acc, curr) => {
-            if (curr.down) {
-                acc.aim += curr.down
-            }
-            if (curr.up) {
-                acc.aim -= curr.up
-            }
+            if (curr.down) acc.aim += curr.down
+            if (curr.up) acc.aim -= curr.up
             if (curr.forward) {
                 acc.horizontal += curr.forward
-                if (acc.aim !== 0) acc.vertical += acc.aim * curr.forward
+                acc.vertical += acc.aim * curr.forward
             }
             return acc
         },
