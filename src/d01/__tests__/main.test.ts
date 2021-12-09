@@ -1,4 +1,4 @@
-import { part1, part2 } from '../main'
+import { part1, part2 } from '../index'
 
 describe('d01', () => {
     const input = `199
